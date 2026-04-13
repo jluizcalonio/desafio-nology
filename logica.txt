@@ -1,0 +1,58 @@
+***** Cálculo - Cashback *****
+cashback calculado sobre valor da compra, 
+após todos os descontos.
+
+cashback base: 5%
+VIPs: 10% de bônus sobre o cashback base
+
+if compras > 500.00:
+    cashback *= 2
+    cashback_normal = 5% * 2 
+    cashback_vip = 5% + 10% * 2
+
+    ex: 100.00
+    cashback_normal = 5 * 2 = 10
+    cashback_vip = 5, sendo 10% de 5 = 0.5, então 5.50. 5.50 * 2 = 11
+
+4) Cliente VIP comprou um produto de R$ 600 usando um cupom de 15% off. 
+Ele recebeu R$ 56 de cashback e abriu reclamação dizendo que deveria receber mais. 
+Qual resposta você daria ao cliente? Justifique exibindo os cálculos necessários/utilizados.
+
+600 - 15% = 510
+valor 15% off = 510
+
+cashback base = 5% de 510 = 25.50
+bônus VIP = 10% de 25.50 = 2.55
+cashback VIP total = 25.50 + 2.55 = 28.05 * 2 = 56.10
+
+# RESPOSTAS # 
+2) Qual cashback será gerado pelo seu código quando um cliente VIP comprar um produto de R$ 600 usando um cupom de 20% off? 
+R$26,40
+
+item_2 = calc_cashback(600, desconto=20, vip=True) print(item_2) 
+# 26.40 - ok 
+
+3) Qual cashback será gerado pelo seu código quando um cliente comprar um produto de R$ 600 usando um cupom de 10% off ? 
+R$54,00
+
+item_3 = calc_cashback(600, desconto=10, vip=False) print(item_3) 
+# 54 (27 cash base * 2 pois > 500) - ok # 
+
+4) O suporte reportou o seguinte: "Cliente VIP comprou um produto de R$ 600 usando um cupom de 15% off. # Ele recebeu R$ 56 de cashback e abriu reclamação dizendo que deveria receber mais". 
+Qual resposta você daria ao cliente? Justifique exibindo os cálculos necessários/utilizados. 
+
+Ele está certo, pois deveria receber 10 centavos a mais (R$56,10). 
+Valor 600 - 15% = 510 
+cashback base = 5% de 510 = 25.50 
+bônus VIP = 10% de 25.50 = 2.55 
+cashback VIP total = 25.50 + 2.55 = 28.05 * 2 (valor > 500) = 56.10
+
+item_4 = calc_cashback(600, desconto=15, vip=True) print(item_4) # 56.10 - ok # 
+
+
+***** .env *****
+
+
+
+***** requirements.txt *****
+
