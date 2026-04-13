@@ -1,5 +1,5 @@
 
-const API_URL = "http://localhost:8000";
+const API_URL = "https://desafio-nology-6mlb.onrender.com";
 
 document.getElementById("form").addEventListener("submit", async (e) => {
   e.preventDefault();
