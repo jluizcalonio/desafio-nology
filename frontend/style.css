@@ -27,8 +27,27 @@ button {
   background: #22c55e;
   color: white;
   cursor: pointer;
+  margin-top: 10px;
 }
 
 button:hover {
   background: #16a34a;
+}
+
+.vip-container {
+  margin: 15px 0;
+}
+
+.vip-label {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.vip-label input {
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
 }
